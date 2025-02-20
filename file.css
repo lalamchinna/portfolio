@@ -1,0 +1,424 @@
+
+* {
+    margin: 0%;
+    padding: 0%;
+  }
+  
+  .nav-item:hover {
+    color: #ff4800;
+  }
+  
+  /* Fade-in and fade-out effect for both <p> tags */
+  .fade-in-out {
+    opacity: 0;
+    animation: fadeCycle 4s ease-in-out infinite; /* Infinite cycle */
+  }
+  .navbar {
+    background-color: aliceblue;
+    height: 60px;
+    color: #ff4800;
+  }
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2%;
+  }
+  
+  .design {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1d1d1d;
+    color: aliceblue;
+  }
+  .design img{
+   border-radius: 10px;
+    box-shadow: 0px 6px 10px 2px white;
+  }
+  /* Keyframes for fading in and out */
+  @keyframes fadeCycle {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1; /* Fade-in */
+    }
+    50% {
+      opacity: 1; /* Keep visible */
+    }
+    75% {
+      opacity: 0; /* Fade-out */
+    }
+    100% {
+      opacity: 0; /* Stay invisible */
+    }
+  }
+  
+  /* Add delay for the second <p> tag */
+  .fade-in-delayed {
+    animation-delay: 2s; /* Wait 2 seconds before the second one fades in */
+  }
+  
+  /* Style to ensure text appears one below the other with some spacing */
+  .text-container p {
+    margin-bottom: 15px; /* Space between the two paragraphs */
+  }
+  
+  .ken img {
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 4px 10px rgb(255, 255, 255));
+  }
+  
+  .kenj img {
+    height: 250px;
+    width: 250px;
+  
+    filter: drop-shadow(0px 4px 10px rgb(0, 0, 0));
+  }
+  .about {
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    color: black;
+  }
+  .det {
+    display: flex;
+  }
+  
+  .skills h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    opacity: 90%;
+  }
+  .skill {
+    background-color: white;
+  
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .bar {
+    margin: 10px 0;
+    width: 400px;
+  }
+  .bar-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Moves the percent to the right */
+    width: 100%;
+  }
+  
+  .bar-text img {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+  }
+  
+  .percent {
+    margin-left: auto; /* Pushes it to the right */
+  }
+  .bar span {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Space between icon and percentage */
+  }
+  
+  .bar span img {
+    height: 30px;
+    width: 30px;
+  }
+  .progress {
+    height: 16px;
+    background: whitesmoke;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+  .progress div {
+    text-align: right;
+    line-height: 20px;
+    color: white;
+    padding-right: 5px;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+  }
+  
+  /* General styling for the contact section */
+.contact {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container for the contact details */
+  .details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the first details section (phone number) */
+  .details-1 {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .details-1 h2 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .details-1 p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+  }
+  .fa-phone{
+    height: 60px;
+
+  }
+  
+  
+  
+  /* Styling for the second details section (form) */
+  .details-2 {
+    flex: 2;
+  }
+  
+  .details-2 form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .details-2 label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .details-2 input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .details-2 input:focus {
+    outline: none;
+    border-color: #007BFF;
+  }
+  
+  .details-2 input#form-control {
+    margin-bottom: 15px;
+  }
+  
+  /* Add some responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .details {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .details-1 {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .details-2 {
+      width: 100%;
+    }
+  }
+  .works h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
+  
+  /* Category Buttons */
+  .category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .category-btn {
+    padding: 10px 20px;
+    background-color: gold;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Portfolio Section */
+  .portfolio-section {
+    padding: 60px 20px;
+  }
+  
+  .works {
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px gold;
+    height: 60vh;
+  }
+  
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .portfolio-item {
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .portfolio-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .portfolio-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Overlay Effect with Sliding Transition */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-60%); /* Start from left */
+    transition: opacity 0.2s ease, transform 0.5s ease;
+  }
+  
+  .portfolio-item:hover .overlay {
+    opacity: 1;
+    transform: translateY(0); /* Slide from left to right */
+  }
+  
+  .overlay-text {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 4px;
+    left: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: translateY(10px); /* Initially off-screen */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .portfolio-item:hover .buttons-container {
+    opacity: 1;
+    transform: translateY(0); /* Slide buttons into view */
+  }
+  
+  /* Buttons for Preview and Source Code */
+  .preview-btn,
+  .source-btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    width: 48%; /* Make buttons take equal width */
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .preview-btn {
+    background-color: gold;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .source-btn {
+    background-color: gold;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .preview-btn:hover {
+    background-color: darkgoldenrod;
+  }
+  
+  .source-btn:hover {
+    background-color: darkgoldenrod;
+  }
+  
+  /* Portfolio Details */
+  
+  /* Filter Hidden Projects */
+  .developer {
+    display: block;
+  }
+  
+  .designing {
+    display: block;
+  }
+  
+  /* Hidden Projects by Default */
+  .hidden {
+    display: none;
+  }
+  .fotter{
+    height: 60px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+  }
+.fotter p{
+text-align: center;
+
+
+}
